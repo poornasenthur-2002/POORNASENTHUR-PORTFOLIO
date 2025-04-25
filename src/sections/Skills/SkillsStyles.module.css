@@ -1,0 +1,119 @@
+.container {
+  padding: 10rem 4rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Theme styles */
+.light {
+  --bg: #f9f9f9;
+  --text: #1a1a1a;
+  --card: #ffffff;
+}
+
+.dark {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --card: #1f1f1f;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+/* Skills grid layout */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+/* Skill card style */
+.skillItem {
+  background-color: var(--card);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skillItem:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Icon styling */
+.icon {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin-bottom: 0.75rem;
+}
+
+/* Skill name */
+.skillName {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.25rem;
+}
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  .container {
+    padding: 6rem 2rem;
+  }
+
+  .sectionTitle {
+    font-size: 2.2rem;
+  }
+
+  .skillsGrid {
+    gap: 1.8rem;
+  }
+
+  .icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .skillName {
+    font-size: 0.95rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 576px) {
+  .container {
+    padding: 4rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .skillsGrid {
+    gap: 1.25rem;
+  }
+
+  .skillItem {
+    padding: 0.75rem;
+  }
+
+  .icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .skillName {
+    font-size: 0.9rem;
+  }
+}
