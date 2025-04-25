@@ -1,4 +1,4 @@
-import styles from '../sections/skills/SkillsStyles.module.css';
+import styles from '../sections/Skills/SkillsStyles.module.css';
 
 function SkillList({ src, skill }) {
   return (
